@@ -1,0 +1,50 @@
+* {
+    color: #364a63;
+}
+.login-form-conainer {
+   
+    padding: 0 320px;
+}
+.login-form-section {
+    border: 1px solid #dbdfea;
+    padding: 30px 50px 50px;
+}
+.h-title {
+    color: #364a63;
+    font-weight: 700;
+}
+.h-desc {
+    color: #0969DA;
+    font-weight: 600;
+    font-size: 18px;
+}
+.login-section-up {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+.form-group input, .form-group select  {
+    width: 100%;
+    border: 1px solid #c3c7d1;
+    font-size: 16px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+.form-group input:focus-visible, .form-group select:focus-visible  {
+    outline: none;
+}
+.input-label {
+    font-weight: 600;
+}
+.primary-btn {
+    background-color: #0969DA;
+    border: none;
+    color: #fff;
+    padding: 8px 40px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+}
