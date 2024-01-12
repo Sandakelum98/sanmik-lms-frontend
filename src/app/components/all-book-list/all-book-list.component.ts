@@ -31,8 +31,6 @@ export class AllBookListComponent implements OnInit {
   }
 
   loanBook(bookId: number) {
-    console.log('loanBook working');
-
     const book = {
       "bookId": bookId
     }
@@ -51,6 +49,41 @@ export class AllBookListComponent implements OnInit {
       },
     })
 
+  }
+
+  returnBook(bookId: number) {
+    this.bookService.returnBook(bookId).subscribe({
+      next: (res: any) => {
+
+        console.log(res);
+        this.toastr.success('Book successfully returned');
+        this.geAllBooks();
+
+      }, error: (err: any) => {
+        console.log(err);
+        this.toastr.error('Book return faied');
+
+      },
+    })
+  }
+
+  searchText: string = '';
+
+  searchBook() {
+    console.log(this.searchText);
+
+    const book = {
+      "searchText": this.searchText
+    }
+
+    this.bookService.searchBook(book).subscribe({
+      next: (resp: any) => {
+        console.log(resp);
+        this.books = resp.data;
+      }, error(err) {
+        this.toastr.error('Search books faied');
+      },
+    })
   }
 
 }

@@ -27,4 +27,12 @@ export class BookService {
     return this.http.post(`${environment.BASE_URL}/book-loan/add-book-loan`, book);
   }
 
+  returnBook(bookId: number): Observable<any> {
+    return this.http.post(`${environment.BASE_URL}/book-loan/return-book/book/${bookId}`, {});
+  }
+
+  searchBook(body: any): Observable<any> {
+    return this.http.post(`${environment.BASE_URL}/book/search-book`, body);
+  }
+
 }

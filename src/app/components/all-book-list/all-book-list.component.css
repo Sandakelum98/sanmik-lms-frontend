@@ -5,3 +5,11 @@
     color: #212529;
     background-color: #ffc107;
 }
+.search-container {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 60px;
+}
+.search-book-input {
+    width: 300px;
+}
